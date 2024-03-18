@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Short Courses | Learn Generative AI from DeepLearning.AI</title>
+<style>
+
+
+/* Default styles for all devices */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.companylogo {
+    color: #F65B66;
+}
+
+.navbar {
+    background-color: #ffffff;
+    overflow: hidden;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.navbar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.buttons {
+    padding-right: 7%;
+}
+
+.navbar img {
+    height: 50px;
+}
+
+.navbar a {
+    color: black;
+    text-decoration: none;
+    padding: 14px 20px;
+}
+
+.navbar a:hover {
+    color: #F65B66;
+}
+
+.glow-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #eb6a73;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.4s ease;
+}
+
+.glow-button:hover {
+    background-color: #ff606b;
+    color: aliceblue;
+}
+
+.hero {
+    width: 100%;
+    height: 50%;
+    background-image: linear-gradient(120deg, #1FBCF1 0%, #2954D6 50%, #2954D6 100%);
+    background-size: cover;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.hero-text {
+    display: flex;
+    padding-right: 400px;
+    flex-direction: column;
+    color: white;
+    font-size: large;
+}
+
+.bgcolorBody {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding-top: 5%;
+    width: 55%;
+    height: 45%;
+    margin-left: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: margin-top 0.3s, box-shadow 0.3s;
+}
+
+.bgcolorBody:hover {
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    margin-top: 3%;
+    margin-right: 3%;
+    margin-bottom: 3%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.innerContainer {
+    display: flex;
+    align-items: center;
+}
+
+.left {
+    flex: 1;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.added {
+    text-align: left;
+    padding-left: 100px;
+}
+
+.right {
+    margin-top: 10%;
+    margin-right: 10%;
+    flex: 1;
+    text-align: left;
+    justify-content: flex-start;
+}
+
+.btn1,
+.btn2 {
+    display: inline-block;
+    margin-top: 20%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.leftDivContent {
+    background-color: #BCC1C7;
+    width: 86.5%;
+    margin-left: 7%;
+}
+
+.leftP {
+    font-weight: bold;
+}
+
+.contImg {
+    margin-top: 10px;
+}
+
+iframe {
+    display: block;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: left;
+}
+
+ul {
+    padding: 0;
+    text-align: left;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+li::before {
+    content: "\2022";
+    position: absolute;
+    left: 0;
+    color: #007bff;
+}
+
+button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff606b;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #a1252e;
+}
+
+.navbar2 {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 30px;
+    margin-top: 0;
+    width: 100%;
+}
+
+.navbar2 nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.navbar2 p {
+    font-weight: bold;
+    color: gray;
+}
+
+.navbar2 ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.navbar2 li {
+    margin-left: 10px;
+}
+
+.btn3 {
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 20px;
+    color: gray;
+    background-color: white;
+    font-size: 24px;
+    margin-right: 10px;
+    font-weight: 400;
+    border-radius: 20px;
+}
+
+.btn3:hover {
+    background-color: #ff606b;
+}
+
+.footer {
+    background-color: #455B66;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footerlogo {
+    margin-bottom: 20px;
+    padding: 40px;
+    color: #ff606b;
+}
+
+.footerbuttons {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+.footerbuttons button {
+    margin: 0 10px;
+}
+
+.fbtn {
+    margin: 0 10px;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icon {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 24px;
+    color: white;
+    padding-bottom: 5%;
+}
+
+.social-icon:hover {
+    color: #007bff;
+}
+
+/* Responsive design */
+
+@media only screen and (max-width: 1200px) {
+    .navbar-inner {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .navbar-inner {
+        flex-direction: column;
+    }
+    .buttons {
+        padding-right: 0;
+    }
+    .hero-text {
+        padding-right: 0;
+        text-align: center;
+    }
+    .bgcolorBody {
+        width: 90%;
+        height: auto;
+        margin-left: 5%;
+    }
+    .left,
+    .right {
+        padding: 0;
+        text-align: center;
+        justify-content: center;
+    }
+    .added {
+        padding-left: 0;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .hero-text {
+        font-size: medium;
+    }
+    .leftP {
+        font-size: medium;
+    }
+    .right {
+        margin-top: 5%;
+        margin-right: 5%;
+    }
+    .btn1,
+    .btn2 {
+        margin-top: 10%;
+        margin-right: 5px;
+        margin-bottom: 5px;
+    }
+    .social-icon {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .navbar {
+        padding: 10px;
+    }
+    .navbar a {
+        padding: 10px 15px;
+    }
+    .navbar2 {
+        padding: 10px;
+    }
+    .navbar2 p {
+        font-size: 14px;
+    }
+    .navbar2 ul {
+        flex-direction: column;
+    }
+    .navbar2 li {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+    .footerbuttons {
+        flex-wrap: wrap;
+    }
+    .footerbuttons button {
+        margin: 10px 0;
+    }
+}
+
+
+
+
+
+</style>
+</head>
+<body>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<div class="navbar" id="navbar">
+  <div class="navbar-inner">
+    <div class="companylogo">
+        <svg viewBox="0 0 272 34" fill="none" xmlns="http://www.w3.org/2000/svg" width="272" height="34" aria-label="DeepLearning.AI"><g fill="currentColor"><path d="M56.775 16.108c0 6.206-4.252 10.005-10.747 10.005H39.42V5.961h6.608c6.495 0 10.747 3.924 10.747 10.147zm-10.747 7.306c4.778 0 7.337-2.724 7.337-7.306 0-4.581-2.56-7.452-7.337-7.452H42.73v14.758h3.298z"></path><path d="M66.97 26.371c-4.602 0-8.007-3.244-8.007-8.26s3.259-8.226 8.006-8.226c4.571 0 7.804 3.159 7.804 7.856.007.535-.027 1.07-.103 1.6H62.412c.233 2.638 2.123 4.232 4.57 4.232 2.038 0 3.173-.988 3.786-2.234h3.582c-.915 2.802-3.448 5.032-7.38 5.032zm-4.541-9.683h8.878c-.056-2.462-2.007-4.03-4.484-4.03-2.24 0-4.044 1.525-4.394 4.03z"></path><path d="M84.938 26.371c-4.601 0-8.007-3.244-8.007-8.26s3.263-8.226 8.007-8.226c4.57 0 7.803 3.159 7.803 7.856a9.792 9.792 0 01-.116 1.6H80.367c.233 2.638 2.128 4.232 4.57 4.232 2.042 0 3.177-.988 3.786-2.234h3.582c-.902 2.802-3.435 5.032-7.367 5.032zm-4.541-9.683h8.878c-.056-2.462-2.007-4.03-4.48-4.03-2.244 0-4.048 1.525-4.398 4.03z"></path><path d="M104.917 9.885c4.221 0 7.541 3.245 7.541 8.166 0 4.92-3.32 8.32-7.541 8.32a7.277 7.277 0 01-3.095-.664 7.248 7.248 0 01-2.516-1.914v9.915h-3.319v-23.57h3.32v2.347a7.004 7.004 0 015.61-2.6zm-.729 2.871c-2.473 0-4.86 1.943-4.86 5.364 0 3.42 2.387 5.39 4.86 5.39 2.473 0 4.894-2.02 4.894-5.46 0-3.437-2.391-5.303-4.894-5.303v.009z"></path><path d="M119.074 5.961v17.484h6.841v2.668h-10.16V5.961h3.319z"></path><path d="M135.584 26.371c-4.602 0-8.007-3.244-8.007-8.26s3.263-8.226 8.007-8.226c4.57 0 7.803 3.159 7.803 7.856a9.927 9.927 0 01-.116 1.625h-12.258c.233 2.639 2.128 4.233 4.571 4.233 2.041 0 3.176-.988 3.785-2.235h3.582c-.902 2.777-3.435 5.007-7.367 5.007zm-4.541-9.683h8.878c-.056-2.462-2.007-4.03-4.48-4.03-2.244 0-4.048 1.525-4.398 4.03z"></path><path d="M153.116 9.885a6.864 6.864 0 013.088.633 6.839 6.839 0 012.475 1.946v-2.325h3.349v15.974h-3.349v-2.38a6.906 6.906 0 01-5.611 2.638c-4.165 0-7.514-3.39-7.514-8.32s3.353-8.166 7.562-8.166zm.699 2.87c-2.473 0-4.86 1.853-4.86 5.304 0 3.451 2.387 5.45 4.86 5.45 2.473 0 4.864-1.938 4.864-5.39 0-3.45-2.361-5.372-4.864-5.372v.009z"></path><path d="M169.72 26.114h-3.319V10.139h3.319v2.325c.928-1.595 2.534-2.579 4.804-2.579v3.438h-.863c-2.447 0-3.958 1.014-3.958 4.405l.017 8.386z"></path><path d="M188.966 17.191c0-2.93-1.602-4.435-4.019-4.435s-4.044 1.504-4.044 4.435v8.922h-3.319V10.14h3.319v1.826a6.16 6.16 0 014.774-2.08c3.755 0 6.582 2.347 6.582 6.812v9.416h-3.293v-8.922z"></path><path d="M196.049 5.905a2.105 2.105 0 011.309-1.931 2.117 2.117 0 012.294.458 2.102 2.102 0 01-1.48 3.588 2.109 2.109 0 01-1.509-.612 2.08 2.08 0 01-.614-1.503zm.431 4.234h3.319v15.974h-3.319V10.14z"></path><path d="M215.558 17.191c0-2.93-1.602-4.435-4.019-4.435s-4.048 1.504-4.048 4.435v8.922h-3.337V10.14h3.319v1.826a6.192 6.192 0 014.796-2.08c3.755 0 6.56 2.338 6.56 6.803v9.425h-3.289l.018-8.922z"></path><path d="M229.538 9.885c2.62 0 4.571 1.216 5.559 2.579v-2.325h3.349V26.37c0 4.35-2.823 7.629-7.829 7.629-4.282 0-7.454-2.119-7.864-5.656h3.289c.496 1.655 2.274 2.785 4.575 2.785 2.559 0 4.48-1.569 4.48-4.758v-2.664a6.903 6.903 0 01-5.559 2.665c-4.222 0-7.571-3.392-7.571-8.321 0-4.93 3.337-8.166 7.571-8.166zm.699 2.87c-2.478 0-4.864 1.853-4.864 5.304 0 3.452 2.386 5.45 4.864 5.45 2.477 0 4.86-1.938 4.86-5.39 0-3.45-2.357-5.372-4.86-5.372v.009z"></path><path d="M242.702 26.316a2.134 2.134 0 01-1.987-1.287 2.114 2.114 0 011.53-2.908 2.138 2.138 0 012.194.896c.235.349.361.76.361 1.18a2.096 2.096 0 01-1.289 1.956 2.11 2.11 0 01-.809.163z"></path><path d="M260.584 21.996h-8.477l-1.455 4.117h-3.453l7.251-20.2h3.846l7.247 20.2h-3.492l-1.467-4.117zM256.38 9.932l-3.341 9.365h6.612l-3.271-9.365z"></path><path d="M268.681 5.961H272v20.152h-3.319V5.961z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M16.643 33.145c-3.292 0-6.51-.972-9.246-2.793a16.588 16.588 0 01-6.13-7.438A16.507 16.507 0 01.32 13.34a16.55 16.55 0 014.555-8.485A16.665 16.665 0 0113.396.318a16.71 16.71 0 019.616.944 16.628 16.628 0 017.47 6.103 16.522 16.522 0 012.804 9.207c0 4.396-1.753 8.61-4.874 11.719a16.68 16.68 0 01-11.769 4.854zm.125-6.628c6.906 0 12.517-5.698 12.517-12.73 0-7.03-5.61-12.725-12.517-12.725-6.906 0-12.517 5.698-12.517 12.725 0 7.027 5.611 12.73 12.517 12.73zm-.125-2.918c-6.289 0-11.386-4.925-11.386-11.002C5.257 6.52 10.36 1.59 16.643 1.59c6.284 0 11.386 4.93 11.386 11.007s-5.097 11.002-11.386 11.002zm-.242-4.508c4.77 0 8.633-3.679 8.633-8.218 0-4.538-3.885-8.221-8.633-8.221-4.747 0-8.632 3.679-8.632 8.221 0 4.543 3.885 8.218 8.632 8.218zm.126-1.59c-3.734 0-6.76-3.207-6.76-7.16 0-3.954 3.018-7.16 6.75-7.16 3.734 0 6.76 3.206 6.76 7.16s-3.021 7.16-6.76 7.16h.01zm-.126-6.28c.729 0 1.44-.214 2.046-.617a3.67 3.67 0 001.356-1.646 3.652 3.652 0 00-.798-3.995 3.687 3.687 0 00-4.012-.794 3.679 3.679 0 00-1.653 1.35 3.655 3.655 0 00-.62 2.037c.002.971.39 1.902 1.08 2.59a3.698 3.698 0 002.601 1.076z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M16.643 33.145c-3.292 0-6.51-.972-9.246-2.793a16.588 16.588 0 01-6.13-7.438A16.507 16.507 0 01.32 13.34a16.55 16.55 0 014.555-8.485A16.665 16.665 0 0113.396.318a16.71 16.71 0 019.616.944 16.628 16.628 0 017.47 6.103 16.522 16.522 0 012.804 9.207c0 4.396-1.753 8.61-4.874 11.719a16.68 16.68 0 01-11.769 4.854zm.125-6.628c6.906 0 12.517-5.698 12.517-12.73 0-7.03-5.61-12.725-12.517-12.725-6.906 0-12.517 5.698-12.517 12.725 0 7.027 5.611 12.73 12.517 12.73zm-.125-2.918c-6.289 0-11.386-4.925-11.386-11.002C5.257 6.52 10.36 1.59 16.643 1.59c6.284 0 11.386 4.93 11.386 11.007s-5.097 11.002-11.386 11.002zm-.242-4.508c4.77 0 8.633-3.679 8.633-8.218 0-4.538-3.885-8.221-8.633-8.221-4.747 0-8.632 3.679-8.632 8.221 0 4.543 3.885 8.218 8.632 8.218z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M16.643 33.145c-3.292 0-6.51-.972-9.246-2.793a16.588 16.588 0 01-6.13-7.438A16.507 16.507 0 01.32 13.34a16.55 16.55 0 014.555-8.485A16.665 16.665 0 0113.396.318a16.71 16.71 0 019.616.944 16.628 16.628 0 017.47 6.103 16.522 16.522 0 012.804 9.207c0 4.396-1.753 8.61-4.874 11.719a16.68 16.68 0 01-11.769 4.854zm.125-6.628c6.906 0 12.517-5.698 12.517-12.73 0-7.03-5.61-12.725-12.517-12.725-6.906 0-12.517 5.698-12.517 12.725 0 7.027 5.611 12.73 12.517 12.73z"></path></g></svg>
+    </div>
+    <div class="buttons">
+      <a href="#home">Courses</a>
+      <a href="#AiNewsletter">AI Newsletter</a>
+      <a href="#Community">Community</a>
+      <a href="#Resources">Resources</a>
+      <a href="#Company">Company</a>
+      <a href="#Start" class="glow-button" color = "white">Start Learning</a>
+    </div>
+  </div>
+</div>
+
+<div class="content">
+    <div class="hero">
+        <div class="hero-text">
+            <p>LEARN GENERATIVE AI</p> 
+        <h1>Short Courses</h1>
+        <br>
+            <pre>
+                <p>Take your generative AI skills to the next level with 
+        short courses from DeepLearning.AI. Our short 
+        courses help you learn new skills, tools, and 
+        concepts efficiently. Available for free for a limited 
+        time.</p></pre>
+        </div>
+        
+    <img class="img" src="https://www.deeplearning.ai/_next/image/?url=%2Fimages%2Fcourses%2Fshort-courses%2Fshort-course-hero.png&w=384&q=90">
+    
+    </div> 
+
+
+    <div class="bgcolorBody">
+        <div class="container">
+            <div class="innerContainer">
+                <div class="left" id="cont1">
+                    <div class="added">
+                        <p>JUST ADDED</p>
+                    <br>
+                    </div>
+                    <iframe width="400" height="515" src="https://www.youtube.com/embed/jMKRUo4wVKA?si=j_nDfcqMRPjiSXgV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <div class="leftDivContent">
+                        <p class="leftP">In collaboration with</p>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZOq5jqFNt4v5r2AGVblc0dYGVptn9RoOJOw&usqp=CAU" width="80px" height="50px" class="contImg">
+                    </div>
+                </div>
+                <div class="right">
+                    <h2>Knowledge Graphs for RAG</h2>
+                    <p>Learn how to build and use knowledge graph systems to improve your retrieval augmented generation applications.</p>
+                    <ul>
+                        <li>Use Neo4j's query language Cypher to manage and retrieve data stored in knowledge graphs.</li>
+                        <li>Write knowledge graph queries that find and format text data to provide more relevant context to LLMs for Retrieval Augmented Generation.</li>
+                        <li>Build a question-answering system using Neo4j and LangChain to chat with a knowledge graph of structured text documents.</li>
+                    </ul>
+                    <p><i class="fa-solid fa-square-poll-vertical"></i> Intermediate <i class="fa-solid fa-person-chalkboard"></i> Andreas Kollegger</p>
+                    <p><i class="fa-solid fa-book-open"></i> Prerequisite recommendation: We recommend familiarity with LangChain or taking "LangChain: Chat with Your Data" prior to this course.</p>
+                    <button type="submit" class="btn1">Enroll for free</button>
+                    <button type="submit" class="btn2">Learn more</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="navbar2">
+        <nav>
+            <p>All COURSES</p>
+            <ul>
+                <li><button type="submit" class="btn3">All</button></li>
+                <li><button type="submit" class="btn3"><i class="fa-solid fa-square-poll-vertical"></i> All beginners</button></li>
+                <li><button type="submit" class="btn3"><i class="fa-solid fa-square-poll-vertical"></i> Intermediate</button></li>
+                <li><button type="submit" class="btn3"><i class="fa-solid fa-square-poll-vertical"></i> Advanced</button></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <div class="bgcolorBody">
+        <div class="container">
+            <div class="innerContainer">
+                <div class="left" id="cont2">
+                        <iframe width="400" height="515" src="https://www.youtube.com/embed/H4YK_7MAckk" title="ChatGPT Prompt Engineering for Developers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <div class="leftDivContent">
+                        <p class="leftP">In collaboration with</p>
+                        <img src="https://freebiehive.com/wp-content/uploads/2024/02/Open-AI-White-Logo-PNG.jpg" width="80px" height="50px" class="contImg">
+                    </div>
+                </div>
+                <div class="right">
+                    <h2>ChatGPT Prompt Engineering for Developers</h2>
+                    <p>Go beyond the chat box. Use API access to leverage LLMs into your own applications, and learn to build a custom chatbot</p>
+                    <ul>
+                        <li>Learn prompt engineering best practices for application development.</li>
+                        <li>Discover new ways to use LLMs, including how to build your own chatbot</li>
+                        <li>Gain hands-on practice writing and iterating on prompts using the OpenAI API</li>
+                    </ul>
+                    <p><i class="fa-solid fa-square-poll-vertical"></i> Beginner to Advanced | <i class="fa-solid fa-person-chalkboard"></i> Isa Fulford, Andrew Ng</p>
+                    <p><i class="fa-solid fa-book-open"></i> Prerequisite recommendation: Basic Python</p>
+                    <button type="submit" class="btn1">Enroll for free</button>
+                    <button type="submit" class="btn2">Learn more</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bgcolorBody">
+        <div class="container">
+            <div class="innerContainer">
+                <div class="left" id="cont3">
+                    <br>
+                    <div class="iframe">
+                        <iframe width="400" height="515" src="https://www.youtube.com/embed/BunESRhYhec?si=7P7K9CNlZh6rQ4b0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="leftDivContent">
+                        <p class="leftP">In collaboration with</p>
+                        <img src="https://freebiehive.com/wp-content/uploads/2024/02/Open-AI-White-Logo-PNG.jpg" width="80px" height="50px" class="contImg">
+                    </div>
+                </div>
+                <div class="right">
+                    <br>
+                    <h2>Building Systems with the ChatGPT API</h2>
+                    <br>
+                    <p>
+                        Level up your use of LLMs. Learn to break down complex tasks, automate workflows, chain LLM calls, and get better outputs.
+                    </p>
+                    <ul>
+                        <li>Efficiently build multi-step systems using large language models.</li>
+                        <li>Learn to split complex tasks into a pipeline of subtasks using multistage prompts.</li>
+                        <li>Evaluate your LLM inputs and outputs for safety, accuracy, and relevance.</li>
+                    </ul>
+                    <p>
+                        <i class="fa-solid fa-square-poll-vertical"></i> Beginner to Advanced
+                        <i class="fa-solid fa-person-chalkboard"></i> Isa Fulford, Andrew Ng
+                    </p>
+                    <p>
+                        <i class="fa-solid fa-book-open"></i> Prerequisite recommendation: Basic Python
+                    </p>
+                    <br>
+                    <br>
+                    <button type="submit" class="btn1">Enroll for free</button>
+                    <button type="submit" class="btn2">Learn more</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bgcolorBody">
+        <div class="container">
+            <div class="innerContainer">
+                <div class="left" id="cont4">
+                    <br>
+                    <div class="iframe">
+                        <iframe width="400" height="515" src="https://www.youtube.com/embed/jFo_gDOOusk" title="LangChain for LLM Application Development: A short course by DeepLearning.AI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="leftDivContent">
+                        <p class="leftP">In collaboration with</p>
+                        <img src="data:image/jpeg;base64,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"" width="80px" height="50px" class="contImg">
+                    </div>
+                </div>
+                <div class="right">
+                    <br>
+                    <h2>LangChain for LLM Application Development</h2>
+                    <br>
+                    <p>
+                        The framework to take LLMs out of the box. Learn to use LangChain to call LLMs into new environments, and use memories, chains, and agents to take on new and complex tasks.
+                    </p>
+                    <ul>
+                        <li>Learn LangChain directly from the creator of the framework, Harrison Chase</li>
+                        <li>Apply LLMs to proprietary data to build personal assistants and specialized chatbots</li>
+                        <li>Use agents, chained calls, and memories to expand your use of LLMs</li>
+                    </ul>
+                    <p>
+                        <i class="fa-solid fa-square-poll-vertical"></i> Beginner
+                        <i class="fa-solid fa-person-chalkboard"></i> Harrison Chase, Andrew Ng
+                    </p>
+                    <p>
+                        <i class="fa-solid fa-book-open"></i> Prerequisite recommendation: Basic Python
+                    </p>
+                    <br>
+                    <br>
+                    <button type="submit" class="btn1">Enroll for free</button>
+                    <button type="submit" class="btn2">Learn more</button>
+                </div>
+            </div>
+        </div>        
+    </div>
+
+    <div class="bgcolorBody">
+        <div class="container">
+            <div class="innerContainer">
+                <div class="left" id="cont5">
+                    <div class="iframe">
+                        <iframe width="400" height="515" src="https://www.youtube.com/embed/fo7bD-NgA4Y?si=6wJ5_d0aTMIOZ5Kr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="leftDivContent">
+                        <p class="leftP">In collaboration with</p>
+                        <img src="data:image/jpeg;base64,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" width="80px" height="50px" class="contImg">
+                    </div>
+                </div>
+                <div class="right">
+                    <br>
+                    <h2>LangChain: Chat with Your Data</h2>
+                    <br>
+                    <p>Create a chatbot to interface with your private data and documents using LangChain.</p>
+                    <br>
+                    <ul>
+                        <li>Learn from LangChain creator, Harrison Chase</li>
+                        <li>Utilize 80+ loaders for diverse data sources in LangChain</li>
+                        <li>Create a chatbot to interact with your own documents and data</li>
+                    </ul>
+                    <br>
+                    <p><i class="fa-solid fa-square-poll-vertical"></i> Beginner <i class="fa-solid fa-person-chalkboard"></i> Harrison Chase</p>
+                    <br>
+                    <p><i class="fa-solid fa-book-open"></i> Prerequisite recommendation: Basic Python</p>
+                    <br>
+                    <button type="submit" class="btn1">Enroll for free</button>
+                    <button type="submit" class="btn2">Learn more</button>
+                </div>
+            </div>
+        </div>        
+    </div>
+    
+    <div class="bgcolorBody">
+        <div class="container">
+            <div class="innerContainer">
+                <div class="left" id="cont6">
+                    <div class="iframe">
+                        <iframe width="400" height="515" src="https://www.youtube.com/embed/9PxhCekQYNI?si=hHsTLR8k9wB01FK0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="leftDivContent">
+                        <p class="leftP">In collaboration with</p>
+                        <img src="https://t4.ftcdn.net/jpg/02/59/78/27/360_F_259782774_erxXtLXqRijKBv8ERgtYpF1IGIKHeEz9.jpg" width="80px" height="50px" class="contImg">
+                    </div>
+                </div>
+                <div class="right">
+                    <br>
+                    <h2>Finetuning Large Language Models</h2>
+                    <br>
+                    <p>Learn to finetune an LLM in minutes and specialize it to use your own data</p>
+                    <br>
+                    <ul>
+                        <li>Master LLM finetuning basics</li>
+                        <li>Differentiate finetuning from prompt engineering and know when to use each</li>
+                        <li>Gain hands-on experience with real datasets for your projects</li>
+                    </ul>
+                    <br>
+                    <p><i class="fa-solid fa-square-poll-vertical"></i> Intermediate <i class="fa-solid fa-person-chalkboard"></i> Sharon Zhou</p>
+                    <br>
+                    <p><i class="fa-solid fa-book-open"></i> Prerequisite recommendation: Basic Python</p>
+                    <br>
+                    <button type="submit" class="btn1">Enroll for free</button>
+                    <button type="submit" class="btn2">Learn more</button>
+                </div>
+            </div>
+        </div>        
+    </div>
+
+    <div class="bgcolorBody">
+        <div class="container">
+            <div class="innerContainer">
+                <div class="left" id="cont8">
+                    <iframe width="400" height="515" src="https://www.youtube.com/embed/4fkqXdcTmGk?si=a3RntTmGc7nNDJbj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <div class="leftDivContent">
+                        <p class="leftP">In collaboration with</p>
+                        <img src="data:image/png;base64,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" width="80px" height="50px" class="contImg">
+                    </div>
+                </div>
+                <div class="right">
+                    <br>
+                    <h2>Building Generative AI Applications with Gradio</h2>
+                    <br>
+                    <p>Create and demo machine learning applications quickly. Share your app with the world on Hugging Face Spaces.</p>
+                    <br>
+                    <ul>
+                        <li>Rapidly develop ML apps</li>
+                        <li>Create image generation, captioning, and text summarization apps</li>
+                        <li>Share your apps with teammates and beta testers on Hugging Face Spaces</li>
+                    </ul>
+                    <br>
+                    <p><i class="fa-solid fa-square-poll-vertical"></i> Beginner <i class="fa-solid fa-person-chalkboard"></i> Apolinário Passos</p>
+                    <br>
+                    <p><i class="fa-solid fa-book-open"></i> Prerequisite recommendation: Basic Python</p>
+                    <br>
+                    <button type="submit" class="btn1">Enroll for free</button>
+                    <button type="submit" class="btn2">Learn more</button>
+                </div>
+            </div>
+        </div>        
+    </div>
+
+    <div class="bgcolorBody">
+        <div class="container">
+            <div class="innerContainer">
+                <div class="left" id="cont10">
+                    <iframe width="400" height="515" src="https://www.youtube.com/embed/obdVesVsGQI?si=Ro9tmHYCfWgGBfBb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div class="right">
+                    <br>
+                    <h2>How Diffusion Models Work</h2>
+                    <br>
+                    <p>Learn and build diffusion models from the ground up. Start with an image of pure noise, and arrive at a final image, learning and building intuition at each step along the way.</p>
+                    <br>
+                    <ul>
+                        <li>Understand diffusion models in use today</li>
+                        <li>Build your own diffusion model, and learn to train it</li>
+                        <li>Implement algorithms to speed up sampling 10x</li>
+                    </ul>
+                    <br>
+                    <p><i class="fa-solid fa-square-poll-vertical"></i> Intermediate <i class="fa-solid fa-person-chalkboard"></i> Sharon Zhou</p>
+                    <br>
+                    <p><i class="fa-solid fa-book-open"></i> Prerequisite recommendation: Python, Tensorflow, or Pytorch</p>
+                    <br>
+                    <button type="submit" class="btn1">Enroll for free</button>
+                    <button type="submit" class="btn2">Learn more</button>
+                </div>
+            </div>
+        </div>        
+    </div>
+
+    <div class="bgcolorBody">
+        <div class="container">
+            <div class="innerContainer">
+                <div class="left" id="cont11">
+                    <iframe width="400" height="515" src="https://www.youtube.com/embed/jMKRUo4wVKA?si=j_nDfcqMRPjiSXgV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <div class="leftDivContent">
+                        <p class="leftP">In collaboration with</p>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZOq5jqFNt4v5r2AGVblc0dYGVptn9RoOJOw&usqp=CAU" width="80px" height="50px" class="contImg">
+                    </div>
+                </div>
+                <div class="right">
+                    <br>
+                    <h2>Knowledge Graphs for RAG</h2>
+                    <br>
+                    <p>Learn how to build and use knowledge graph systems to improve your retrieval augmented generation applications.</p>
+                    <br>
+                    <ul>
+                        <li>Use Neo4j’s query language Cypher to manage and retrieve data stored in knowledge graphs.</li>
+                        <li>Write knowledge graph queries that find and format text data to provide more relevant context to LLMs for Retrieval Augmented Generation.</li>
+                        <li>Build a question-answering system using Neo4j and LangChain to chat with a knowledge graph of structured text documents.</li>
+                    </ul>
+                    <br>
+                    <p><i class="fa-solid fa-square-poll-vertical"></i> Intermediate <i class="fa-solid fa-person-chalkboard"></i> Andreas Kollegger</p>
+                    <br>
+                    <p><i class="fa-solid fa-book-open"></i> Prerequisite recommendation: We recommend familiarity with LangChain or taking "LangChain: Chat with Your Data" prior to this course.</p>
+                    <br>
+                    <button type="submit" class="btn1">Enroll for free</button>
+                    <button type="submit" class="btn2">Learn more</button>
+                </div>
+            </div>
+        </div>
+             
+    </div>
+
+</div>
+
+<footer class="footer">
+    <div class="footerlogo">
+        <svg viewBox="0 0 272 34" fill="none" xmlns="http://www.w3.org/2000/svg" width="200" height="34" aria-label="DeepLearning.AI"><g fill="currentColor"><path d="M56.775 16.108c0 6.206-4.252 10.005-10.747 10.005H39.42V5.961h6.608c6.495 0 10.747 3.924 10.747 10.147zm-10.747 7.306c4.778 0 7.337-2.724 7.337-7.306 0-4.581-2.56-7.452-7.337-7.452H42.73v14.758h3.298z"></path><path d="M66.97 26.371c-4.602 0-8.007-3.244-8.007-8.26s3.259-8.226 8.006-8.226c4.571 0 7.804 3.159 7.804 7.856.007.535-.027 1.07-.103 1.6H62.412c.233 2.638 2.123 4.232 4.57 4.232 2.038 0 3.173-.988 3.786-2.234h3.582c-.915 2.802-3.448 5.032-7.38 5.032zm-4.541-9.683h8.878c-.056-2.462-2.007-4.03-4.484-4.03-2.24 0-4.044 1.525-4.394 4.03z"></path><path d="M84.938 26.371c-4.601 0-8.007-3.244-8.007-8.26s3.263-8.226 8.007-8.226c4.57 0 7.803 3.159 7.803 7.856a9.792 9.792 0 01-.116 1.6H80.367c.233 2.638 2.128 4.232 4.57 4.232 2.042 0 3.177-.988 3.786-2.234h3.582c-.902 2.802-3.435 5.032-7.367 5.032zm-4.541-9.683h8.878c-.056-2.462-2.007-4.03-4.48-4.03-2.244 0-4.048 1.525-4.398 4.03z"></path><path d="M104.917 9.885c4.221 0 7.541 3.245 7.541 8.166 0 4.92-3.32 8.32-7.541 8.32a7.277 7.277 0 01-3.095-.664 7.248 7.248 0 01-2.516-1.914v9.915h-3.319v-23.57h3.32v2.347a7.004 7.004 0 015.61-2.6zm-.729 2.871c-2.473 0-4.86 1.943-4.86 5.364 0 3.42 2.387 5.39 4.86 5.39 2.473 0 4.894-2.02 4.894-5.46 0-3.437-2.391-5.303-4.894-5.303v.009z"></path><path d="M119.074 5.961v17.484h6.841v2.668h-10.16V5.961h3.319z"></path><path d="M135.584 26.371c-4.602 0-8.007-3.244-8.007-8.26s3.263-8.226 8.007-8.226c4.57 0 7.803 3.159 7.803 7.856a9.927 9.927 0 01-.116 1.625h-12.258c.233 2.639 2.128 4.233 4.571 4.233 2.041 0 3.176-.988 3.785-2.235h3.582c-.902 2.777-3.435 5.007-7.367 5.007zm-4.541-9.683h8.878c-.056-2.462-2.007-4.03-4.48-4.03-2.244 0-4.048 1.525-4.398 4.03z"></path><path d="M153.116 9.885a6.864 6.864 0 013.088.633 6.839 6.839 0 012.475 1.946v-2.325h3.349v15.974h-3.349v-2.38a6.906 6.906 0 01-5.611 2.638c-4.165 0-7.514-3.39-7.514-8.32s3.353-8.166 7.562-8.166zm.699 2.87c-2.473 0-4.86 1.853-4.86 5.304 0 3.451 2.387 5.45 4.86 5.45 2.473 0 4.864-1.938 4.864-5.39 0-3.45-2.361-5.372-4.864-5.372v.009z"></path><path d="M169.72 26.114h-3.319V10.139h3.319v2.325c.928-1.595 2.534-2.579 4.804-2.579v3.438h-.863c-2.447 0-3.958 1.014-3.958 4.405l.017 8.386z"></path><path d="M188.966 17.191c0-2.93-1.602-4.435-4.019-4.435s-4.044 1.504-4.044 4.435v8.922h-3.319V10.14h3.319v1.826a6.16 6.16 0 014.774-2.08c3.755 0 6.582 2.347 6.582 6.812v9.416h-3.293v-8.922z"></path><path d="M196.049 5.905a2.105 2.105 0 011.309-1.931 2.117 2.117 0 012.294.458 2.102 2.102 0 01-1.48 3.588 2.109 2.109 0 01-1.509-.612 2.08 2.08 0 01-.614-1.503zm.431 4.234h3.319v15.974h-3.319V10.14z"></path><path d="M215.558 17.191c0-2.93-1.602-4.435-4.019-4.435s-4.048 1.504-4.048 4.435v8.922h-3.337V10.14h3.319v1.826a6.192 6.192 0 014.796-2.08c3.755 0 6.56 2.338 6.56 6.803v9.425h-3.289l.018-8.922z"></path><path d="M229.538 9.885c2.62 0 4.571 1.216 5.559 2.579v-2.325h3.349V26.37c0 4.35-2.823 7.629-7.829 7.629-4.282 0-7.454-2.119-7.864-5.656h3.289c.496 1.655 2.274 2.785 4.575 2.785 2.559 0 4.48-1.569 4.48-4.758v-2.664a6.903 6.903 0 01-5.559 2.665c-4.222 0-7.571-3.392-7.571-8.321 0-4.93 3.337-8.166 7.571-8.166zm.699 2.87c-2.478 0-4.864 1.853-4.864 5.304 0 3.452 2.386 5.45 4.864 5.45 2.477 0 4.86-1.938 4.86-5.39 0-3.45-2.357-5.372-4.86-5.372v.009z"></path><path d="M242.702 26.316a2.134 2.134 0 01-1.987-1.287 2.114 2.114 0 011.53-2.908 2.138 2.138 0 012.194.896c.235.349.361.76.361 1.18a2.096 2.096 0 01-1.289 1.956 2.11 2.11 0 01-.809.163z"></path><path d="M260.584 21.996h-8.477l-1.455 4.117h-3.453l7.251-20.2h3.846l7.247 20.2h-3.492l-1.467-4.117zM256.38 9.932l-3.341 9.365h6.612l-3.271-9.365z"></path><path d="M268.681 5.961H272v20.152h-3.319V5.961z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M16.643 33.145c-3.292 0-6.51-.972-9.246-2.793a16.588 16.588 0 01-6.13-7.438A16.507 16.507 0 01.32 13.34a16.55 16.55 0 014.555-8.485A16.665 16.665 0 0113.396.318a16.71 16.71 0 019.616.944 16.628 16.628 0 017.47 6.103 16.522 16.522 0 012.804 9.207c0 4.396-1.753 8.61-4.874 11.719a16.68 16.68 0 01-11.769 4.854zm.125-6.628c6.906 0 12.517-5.698 12.517-12.73 0-7.03-5.61-12.725-12.517-12.725-6.906 0-12.517 5.698-12.517 12.725 0 7.027 5.611 12.73 12.517 12.73zm-.125-2.918c-6.289 0-11.386-4.925-11.386-11.002C5.257 6.52 10.36 1.59 16.643 1.59c6.284 0 11.386 4.93 11.386 11.007s-5.097 11.002-11.386 11.002zm-.242-4.508c4.77 0 8.633-3.679 8.633-8.218 0-4.538-3.885-8.221-8.633-8.221-4.747 0-8.632 3.679-8.632 8.221 0 4.543 3.885 8.218 8.632 8.218zm.126-1.59c-3.734 0-6.76-3.207-6.76-7.16 0-3.954 3.018-7.16 6.75-7.16 3.734 0 6.76 3.206 6.76 7.16s-3.021 7.16-6.76 7.16h.01zm-.126-6.28c.729 0 1.44-.214 2.046-.617a3.67 3.67 0 001.356-1.646 3.652 3.652 0 00-.798-3.995 3.687 3.687 0 00-4.012-.794 3.679 3.679 0 00-1.653 1.35 3.655 3.655 0 00-.62 2.037c.002.971.39 1.902 1.08 2.59a3.698 3.698 0 002.601 1.076z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M16.643 33.145c-3.292 0-6.51-.972-9.246-2.793a16.588 16.588 0 01-6.13-7.438A16.507 16.507 0 01.32 13.34a16.55 16.55 0 014.555-8.485A16.665 16.665 0 0113.396.318a16.71 16.71 0 019.616.944 16.628 16.628 0 017.47 6.103 16.522 16.522 0 012.804 9.207c0 4.396-1.753 8.61-4.874 11.719a16.68 16.68 0 01-11.769 4.854zm.125-6.628c6.906 0 12.517-5.698 12.517-12.73 0-7.03-5.61-12.725-12.517-12.725-6.906 0-12.517 5.698-12.517 12.725 0 7.027 5.611 12.73 12.517 12.73zm-.125-2.918c-6.289 0-11.386-4.925-11.386-11.002C5.257 6.52 10.36 1.59 16.643 1.59c6.284 0 11.386 4.93 11.386 11.007s-5.097 11.002-11.386 11.002zm-.242-4.508c4.77 0 8.633-3.679 8.633-8.218 0-4.538-3.885-8.221-8.633-8.221-4.747 0-8.632 3.679-8.632 8.221 0 4.543 3.885 8.218 8.632 8.218z"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M16.643 33.145c-3.292 0-6.51-.972-9.246-2.793a16.588 16.588 0 01-6.13-7.438A16.507 16.507 0 01.32 13.34a16.55 16.55 0 014.555-8.485A16.665 16.665 0 0113.396.318a16.71 16.71 0 019.616.944 16.628 16.628 0 017.47 6.103 16.522 16.522 0 012.804 9.207c0 4.396-1.753 8.61-4.874 11.719a16.68 16.68 0 01-11.769 4.854zm.125-6.628c6.906 0 12.517-5.698 12.517-12.73 0-7.03-5.61-12.725-12.517-12.725-6.906 0-12.517 5.698-12.517 12.725 0 7.027 5.611 12.73 12.517 12.73z"></path></g></svg>
+    </div>
+    <div class="footerbuttons">
+        <button class="fbtn">Short Courses</button>
+        <button class="fbtn">The Batch</button>
+        <button class="fbtn">Specialization</button>
+        <button class="fbtn">Community</button>
+        <button class="fbtn">Careers</button>
+        <button class="fbtn">About</button>
+    </div>
+    <div class="social-icons">
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>        
+    </div>
+</footer>
+
+
+
+</body>
+</html>
