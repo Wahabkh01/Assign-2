@@ -7,6 +7,7 @@
 <style>
 
 
+/* Default styles for all devices */
 * {
     margin: 0;
     padding: 0;
@@ -314,6 +315,8 @@ button:hover {
     color: #007bff;
 }
 
+/* Responsive design */
+
 @media only screen and (max-width: 1200px) {
     .navbar-inner {
         width: 90%;
@@ -395,6 +398,102 @@ button:hover {
     }
     .footerbuttons button {
         margin: 10px 0;
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    .hero-text {
+        padding-right: 0;
+        text-align: center;
+    }
+    .bgcolorBody {
+        width: 80%;
+        margin-left: 10%;
+    }
+    .left,
+    .right {
+        padding: 0;
+        text-align: center;
+        justify-content: center;
+    }
+    .added {
+        padding-left: 0;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .navbar {
+        padding: 15px;
+    }
+    .navbar a {
+        padding: 10px 15px;
+    }
+    .navbar2 {
+        padding: 10px;
+    }
+    .navbar2 p {
+        font-size: 14px;
+    }
+    .navbar2 ul {
+        flex-direction: column;
+    }
+    .navbar2 li {
+        margin-left: 0;
+        margin-top: 5px;
+    }
+    .footerbuttons {
+        flex-wrap: wrap;
+    }
+    .footerbuttons button {
+        margin: 10px 0;
+    }
+    .hero-text {
+        font-size: medium;
+    }
+    .leftP {
+        font-size: medium;
+    }
+    .right {
+        margin-top: 5%;
+        margin-right: 5%;
+    }
+    .btn1,
+    .btn2 {
+        margin-top: 10%;
+        margin-right: 5px;
+        margin-bottom: 5px;
+    }
+    .social-icon {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar a {
+        padding: 8px 12px;
+    }
+    .navbar2 p {
+        font-size: 12px;
+    }
+    .btn1,
+    .btn2 {
+        margin-top: 5%;
+        margin-right: 5px;
+        margin-bottom: 5px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .hero-text {
+        padding-right: 0;
+    }
+    .bgcolorBody {
+        width: 90%;
+        margin-left: 5%;
+    }
+    .right {
+        margin-right: 5%;
     }
 }
 
